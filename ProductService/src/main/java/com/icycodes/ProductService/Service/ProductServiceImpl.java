@@ -14,8 +14,6 @@ import java.util.logging.Logger;
 @Log4j2
 public class ProductServiceImpl implements ProductService{
 
-    @Autowired
-    private Logger logger;
 
     @Autowired
     private ProductRepository productRepository;
@@ -37,6 +35,6 @@ public class ProductServiceImpl implements ProductService{
 
         log.info("product saved in database");
         log.info(product.getProductId());
-        return UUID.fromString(product.getProductId());
+        return String.valueOf(product.getProductId());
     }
 }

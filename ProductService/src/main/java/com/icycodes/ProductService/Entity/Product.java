@@ -21,17 +21,14 @@ public class Product {
     private UUID productId;
 
     @Column(name = "Product_Name")
-    @NotBlank
     private String productName;
 
     @Column(name = "Product_Price")
-    @NotEmpty
     @PositiveOrZero
     private Long price;
 
 
     @Column(name = "Product_Quantity")
-    @NotEmpty
     @PositiveOrZero
     private Long quantity;
 
